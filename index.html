@@ -1,193 +1,206 @@
 ﻿<!DOCTYPE html>
+
 <!--[if IE 8]><html class="no-js lt-ie9" lang="en"> <![endif]-->
 <!--[if gt IE 8]>
 <!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
-
-	<!-- Basic Page Needs
+<!-- Basic Page Needs
   ================================================== -->
-	<meta charset="utf-8">
-	<title>Miloš Mihajlović © mihajmi</title>
-	<meta name="Milos Mihajlovic" content="Official website of Milos Mihajlovic serbian pianist - about, what I do, what they say, video, contact, social">
-	<meta name="Milos Mihajlovic" content="Milos Mihajlovic piano music instrumental pop classical ethno pianist klavir">
-	<meta name="google-site-verification" content="qRO713kWjo2g7L21GFOoZsaqNIB2M1ieRc1Q33stPlY" />
-	<meta property="og:image" content="https://mihajmi.com/" src="assets/images/milosmihajlovic_1.png">
-
-	<!-- Mobile Specific Metas
+<meta charset="utf-8"/>
+<title>Miloš Mihajlović © mihajmi</title>
+<meta content="Official website of Milos Mihajlovic serbian pianist - about, what I do, what they say, video, contact, social" name="Milos Mihajlovic"/>
+<meta content="Milos Mihajlovic piano music instrumental pop classical ethno pianist klavir" name="Milos Mihajlovic"/>
+<meta content="qRO713kWjo2g7L21GFOoZsaqNIB2M1ieRc1Q33stPlY" name="google-site-verification"/>
+<meta content="https://mihajmi.com/" property="og:image" src="assets/images/milosmihajlovic_1.png"/>
+<!-- Mobile Specific Metas
   ================================================== -->
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	
-	
-	
-	<!-- CSS
+<meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport"/>
+<!-- CSS
   ================================================== -->
-	<link rel="stylesheet" href="css/base.css"/>
-	<link rel="stylesheet" href="css/skeleton.css"/>
-	<link rel="stylesheet" href="css/layout.css"/>
-	<link rel="stylesheet" href="css/color.css"/>
-	<link rel="stylesheet" href="css/font-awesome.css" />
-	<link rel="stylesheet" href="css/et-line.css"/>
-	<link rel="stylesheet" href="css/owl.carousel.css"/>
-	<link rel="stylesheet" href="css/owl.transitions.css"/>
-	<link rel="stylesheet" href="css/retina.css"/>
-	<link rel="stylesheet" href="css/settings.css"/>
-	<link rel="stylesheet" href="css/layers.css"/>
-	<link rel="stylesheet" href="css/navigation.css"/>
-	<link rel="stylesheet" href="css/jquery.fancybox.css"/>
-	
-	
-
-		
-	<!-- Favicons
+<link href="css/base.css" rel="stylesheet"/>
+<link href="css/skeleton.css" rel="stylesheet"/>
+<link href="css/layout.css" rel="stylesheet"/>
+<link href="css/color.css" rel="stylesheet"/>
+<link href="css/font-awesome.css" rel="stylesheet"/>
+<link href="css/et-line.css" rel="stylesheet"/>
+<link href="css/owl.carousel.css" rel="stylesheet"/>
+<link href="css/owl.transitions.css" rel="stylesheet"/>
+<link href="css/retina.css" rel="stylesheet"/>
+<link href="css/settings.css" rel="stylesheet"/>
+<link href="css/layers.css" rel="stylesheet"/>
+<link href="css/navigation.css" rel="stylesheet"/>
+<link href="css/jquery.fancybox.css" rel="stylesheet"/>
+<!-- Favicons
 	================================================== -->
-	<link rel="shortcut icon" href="favicon.png">
-	<link rel="apple-touch-icon" href="apple-touch-icon.png">
-	<link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72x72.png">
-	<link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114x114.png">
-	<script type="text/javascript" src="js/modernizr.custom.js"></script> 
-	
-	
-	<!-- Open Street Map
+<link href="favicon.png" rel="shortcut icon"/>
+<link href="apple-touch-icon.png" rel="apple-touch-icon"/>
+<link href="apple-touch-icon-72x72.png" rel="apple-touch-icon" sizes="72x72"/>
+<link href="apple-touch-icon-114x114.png" rel="apple-touch-icon" sizes="114x114"/>
+<script src="js/modernizr.custom.js" type="text/javascript"></script>
+<!-- Open Street Map
 	================================================== -->
-	
-	<link rel="stylesheet" href="/leaflet/leaflet.css" />
-	<script src="/leaflet/leaflet.js"></script>
-	
-</head>
-<body class="royal_preloader">	
-	
-	<div id="royal_preloader"></div>
-	
-	<!-- MENU
-    ================================================== -->	
+<link href="/leaflet/leaflet.css" rel="stylesheet"/>
+<script src="/leaflet/leaflet.js"></script>
+<link href="leaflet/leaflet.css" rel="stylesheet"/><style>
+          #cd-google-map {
+            height: 500px;
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+          }
 
-		<nav id="menu-wrap" class="menu-back cbp-af-header">
-			<div class="container">
-				<div class="twelve columns">
-					<div class="logo"></div>
-					<ul class="slimmenu">
-						<li>
-							<a href="#home">Home</a>
-						</li>
-						<li>
-							<a href="#about">About</a>
-						</li>
-						<li> 
-							<a href="#media">what I do</a>
-						</li>
-						<li> 
-							<a href="#quote">what they say</a>
-						</li>
-						<li>
-							<a href="#contact">hello</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</nav>
-		
-	<!-- Primary Page Layout
+          #cd-zoom-in, #cd-zoom-out {
+            position: absolute;
+          }
+        </style><style>
+#google-container,
+#map,
+#cd-google-map {
+  height: 500px !important;
+  width: 100% !important;
+}
+
+.leaflet-container,
+.leaflet-pane,
+.leaflet-map-pane,
+.leaflet-tile-pane,
+.leaflet-overlay-pane,
+.leaflet-shadow-pane,
+.leaflet-marker-pane,
+.leaflet-tooltip-pane,
+.leaflet-popup-pane {
+  z-index: 0 !important;
+}
+
+.contact-half-wrap {
+  position: relative;
+  z-index: 1;
+}
+</style></head>
+<body class="royal_preloader">
+<div id="royal_preloader"></div>
+<!-- MENU
+    ================================================== -->
+<nav class="menu-back cbp-af-header" id="menu-wrap">
+<div class="container">
+<div class="twelve columns">
+<div class="logo"></div>
+<ul class="slimmenu">
+<li>
+<a href="#home">Home</a>
+</li>
+<li>
+<a href="#about">About</a>
+</li>
+<li>
+<a href="#media">what I do</a>
+</li>
+<li>
+<a href="#quote">what they say</a>
+</li>
+<li>
+<a href="#contact">hello</a>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+<!-- Primary Page Layout
 	================================================== -->
-
-		<div class="section full-height" id="home">
-			<div class="home-carousel-wrap">						
-				<div id="sync1" class="owl-carousel">
-					<div class="item background-home-image-1">
-						<div class="home-mask"></div>
-						<div class="home-text">
-							<div class="container fade-elements">
-								<div class="twelve columns">
-									<h1><br>MILOŠ MIHAJLOVIĆ</h1>
-								</div>
-							</div>
-						</div>	
-					</div>
-					<div class="item background-home-image-2">
-						<div class="home-mask"></div>
-						<div class="home-text">
-							<div class="container fade-elements">
-								<div class="twelve columns">
-									<h1><br>CHANGE YOUR PERSPECTIVE</h1>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="item background-home-image-3">
-						<div class="home-mask"></div>
-						<div class="home-text">
-							<div class="container fade-elements">
-								<div class="twelve columns">
-									<h1><br>Because no one else will...</h1>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-					
-				<div id="sync2" class="owl-carousel fade-elements">
-					<div class="item">
-					</div>
-					<div class="item">
-					</div>
-					<div class="item">
-					</div>
-				</div>							
-			</div>
-			
-			<a href="#about" data-gal="m_PageScroll2id" data-ps2id-offset="78"><div class="link-down fade-elements"></div></a>
-			
-		</div>
-		
-		
-		<div class="section back-white" id="about">
-			<div class="section padding-top-bottom">
-				<div class="container">
-					<div class="twelve columns">
-						<div class="title-text leftb">
-							<p>About<span>Who am I and what I do</span></p>
-							<h3>Miloš Mihajlović (born June 1, 1978, in Niš, Serbia) is a Serbian pianist and university professor.</h3>
-						</div>
-					</div>
-					<div class="twelve columns" >
-						<div class="about-wrap">
-							<div class="about-icon">
-								<svg version="1.1" id="svg-icon-1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="48px" height="48px" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
-								<path fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" width="40" height="58" d="M4 3 L44 3 L44 61 L4 61 Z" style="stroke-dasharray: 196, 198; stroke-dashoffset: 0;"></path>
-								<path fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" d="M34,3L34,60" style="stroke-dasharray: 57, 59; stroke-dashoffset: 0;"></path>
-								<path fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" d="M8,16L0,16" style="stroke-dasharray: 8, 10; stroke-dashoffset: 0;"></path>
-								<path fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" d="M8,8L0,8" style="stroke-dasharray: 8, 10; stroke-dashoffset: 0;"></path>
-								<path fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" d="M8,24L0,24" style="stroke-dasharray: 8, 10; stroke-dashoffset: 0;"></path>
-								<path fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" d="M8,32L0,32" style="stroke-dasharray: 8, 10; stroke-dashoffset: 0;"></path>
-								<path fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" d="M8,40L0,40" style="stroke-dasharray: 8, 10; stroke-dashoffset: 0;"></path>
-								<path fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" d="M8,48L0,48" style="stroke-dasharray: 8, 10; stroke-dashoffset: 0;"></path>
-								<path fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" d="M8,56L0,56" style="stroke-dasharray: 8, 10; stroke-dashoffset: 0;"></path>
-								<path fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" d="M55,1L55,54L59,62L63,54L63,1Z" style="stroke-dasharray: 132, 134; stroke-dashoffset: 0;"></path>
-								<path fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" d="M55,11L63,11" style="stroke-dasharray: 8, 10; stroke-dashoffset: 0;"></path>
-								</svg>
-							</div>
-							<h5 data-scroll-reveal="enter bottom move 100px over 1s after 0.3s">EDUCATION</h5>
-							<p data-scroll-reveal="enter bottom move 100px over 1s after 0.3s">Miloš Mihajlović completed his undergraduate studies at the Faculty of Music, University of Arts in Belgrade in 1999, and obtained the academic degree of Magister of Arts in Music in 2005. He studied under the mentorship of Professor Nevena Popović. During his studies, he was recognized with the Emil Hajek Fund Award for the most talented young pianist and the Olga Jovanović Fund Award for the most promising young pianist. His artistic formation was further enriched through masterclasses and consultations with distinguished pedagogues such as Sergei Dorensky, Alexander Shtarkman, and Michel Dalberto.</p>
-						</div>
-					</div>
-					<div class="twelve columns" >
-						<div class="about-wrap">
-							<div class="about-icon">
-								<svg version="1.1" id="svg-icon-2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="48px" height="48px" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
-								<g>
-									<path fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" d="M46,30L63,20L63,52L46,42L46,52L1,52L1,20L
-										46,20Z" style="stroke-dasharray: 214, 216; stroke-dashoffset: 0;"></path>
-									<path fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" d="M6,28L10,28" style="stroke-dasharray: 4, 6; stroke-dashoffset: 0;"></path>
-									<path fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" d="M14,28L18,28" style="stroke-dasharray: 4, 6; stroke-dashoffset: 0;"></path>
-									<path fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" width="18" height="10" d="M7 36 L25 36 L25 46 L7 46 Z" style="stroke-dasharray: 56, 58; stroke-dashoffset: 0;"></path>
-									<path fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" d="M6,12L32,12L40,20" style="stroke-dasharray: 38, 40; stroke-dashoffset: 0;"></path>
-								</g>
-								</svg>
-							</div>
-							<h5 data-scroll-reveal="enter bottom move 100px over 1s after 0.3s">AWARDS AND RECOGNITIONS</h5>
-							<p data-scroll-reveal="enter bottom move 100px over 1s after 0.3s" class=MsoNormal><span style='font-family:"Times New Roman"'>Miloš Mihajlović has won top prizes at a number of international piano competitions. Highlights include:</span></p>
-							<p class=MsoNormal><span style='enable-background:new 0 0 48 48'>&nbsp;</span></p>
-							<p data-scroll-reveal="enter bottom move 100px over 1s after 0.3s" class=MsoListParagraph style='text-indent:-18.0pt'><span style='font-family:
-Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<div class="section full-height" id="home">
+<div class="home-carousel-wrap">
+<div class="owl-carousel" id="sync1">
+<div class="item background-home-image-1">
+<div class="home-mask"></div>
+<div class="home-text">
+<div class="container fade-elements">
+<div class="twelve columns">
+<h1><br/>MILOŠ MIHAJLOVIĆ</h1>
+</div>
+</div>
+</div>
+</div>
+<div class="item background-home-image-2">
+<div class="home-mask"></div>
+<div class="home-text">
+<div class="container fade-elements">
+<div class="twelve columns">
+<h1><br/>CHANGE YOUR PERSPECTIVE</h1>
+</div>
+</div>
+</div>
+</div>
+<div class="item background-home-image-3">
+<div class="home-mask"></div>
+<div class="home-text">
+<div class="container fade-elements">
+<div class="twelve columns">
+<h1><br/>Because no one else will...</h1>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="owl-carousel fade-elements" id="sync2">
+<div class="item">
+</div>
+<div class="item">
+</div>
+<div class="item">
+</div>
+</div>
+</div>
+<a data-gal="m_PageScroll2id" data-ps2id-offset="78" href="#about"><div class="link-down fade-elements"></div></a>
+</div>
+<div class="section back-white" id="about">
+<div class="section padding-top-bottom">
+<div class="container">
+<div class="twelve columns">
+<div class="title-text leftb">
+<p>About<span>Who am I and what I do</span></p>
+<h3>Miloš Mihajlović (born June 1, 1978, in Niš, Serbia) is a Serbian pianist and university professor.</h3>
+</div>
+</div>
+<div class="twelve columns">
+<div class="about-wrap">
+<div class="about-icon">
+<svg enable-background="new 0 0 64 64" height="48px" id="svg-icon-1" version="1.1" viewbox="0 0 64 64" width="48px" x="0px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0px">
+<path d="M4 3 L44 3 L44 61 L4 61 Z" fill="none" height="58" stroke="#000000" stroke-miterlimit="10" stroke-width="2" style="stroke-dasharray: 196, 198; stroke-dashoffset: 0;" width="40"></path>
+<path d="M34,3L34,60" fill="none" stroke="#000000" stroke-miterlimit="10" stroke-width="2" style="stroke-dasharray: 57, 59; stroke-dashoffset: 0;"></path>
+<path d="M8,16L0,16" fill="none" stroke="#000000" stroke-miterlimit="10" stroke-width="2" style="stroke-dasharray: 8, 10; stroke-dashoffset: 0;"></path>
+<path d="M8,8L0,8" fill="none" stroke="#000000" stroke-miterlimit="10" stroke-width="2" style="stroke-dasharray: 8, 10; stroke-dashoffset: 0;"></path>
+<path d="M8,24L0,24" fill="none" stroke="#000000" stroke-miterlimit="10" stroke-width="2" style="stroke-dasharray: 8, 10; stroke-dashoffset: 0;"></path>
+<path d="M8,32L0,32" fill="none" stroke="#000000" stroke-miterlimit="10" stroke-width="2" style="stroke-dasharray: 8, 10; stroke-dashoffset: 0;"></path>
+<path d="M8,40L0,40" fill="none" stroke="#000000" stroke-miterlimit="10" stroke-width="2" style="stroke-dasharray: 8, 10; stroke-dashoffset: 0;"></path>
+<path d="M8,48L0,48" fill="none" stroke="#000000" stroke-miterlimit="10" stroke-width="2" style="stroke-dasharray: 8, 10; stroke-dashoffset: 0;"></path>
+<path d="M8,56L0,56" fill="none" stroke="#000000" stroke-miterlimit="10" stroke-width="2" style="stroke-dasharray: 8, 10; stroke-dashoffset: 0;"></path>
+<path d="M55,1L55,54L59,62L63,54L63,1Z" fill="none" stroke="#000000" stroke-miterlimit="10" stroke-width="2" style="stroke-dasharray: 132, 134; stroke-dashoffset: 0;"></path>
+<path d="M55,11L63,11" fill="none" stroke="#000000" stroke-miterlimit="10" stroke-width="2" style="stroke-dasharray: 8, 10; stroke-dashoffset: 0;"></path>
+</svg>
+</div>
+<h5 data-scroll-reveal="enter bottom move 100px over 1s after 0.3s">EDUCATION</h5>
+<p data-scroll-reveal="enter bottom move 100px over 1s after 0.3s">Miloš Mihajlović completed his undergraduate studies at the Faculty of Music, University of Arts in Belgrade in 1999, and obtained the academic degree of Magister of Arts in Music in 2005. He studied under the mentorship of Professor Nevena Popović. During his studies, he was recognized with the Emil Hajek Fund Award for the most talented young pianist and the Olga Jovanović Fund Award for the most promising young pianist. His artistic formation was further enriched through masterclasses and consultations with distinguished pedagogues such as Sergei Dorensky, Alexander Shtarkman, and Michel Dalberto.</p>
+</div>
+</div>
+<div class="twelve columns">
+<div class="about-wrap">
+<div class="about-icon">
+<svg enable-background="new 0 0 64 64" height="48px" id="svg-icon-2" version="1.1" viewbox="0 0 64 64" width="48px" x="0px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0px">
+<g>
+<path d="M46,30L63,20L63,52L46,42L46,52L1,52L1,20L
+										46,20Z" fill="none" stroke="#000000" stroke-miterlimit="10" stroke-width="2" style="stroke-dasharray: 214, 216; stroke-dashoffset: 0;"></path>
+<path d="M6,28L10,28" fill="none" stroke="#000000" stroke-miterlimit="10" stroke-width="2" style="stroke-dasharray: 4, 6; stroke-dashoffset: 0;"></path>
+<path d="M14,28L18,28" fill="none" stroke="#000000" stroke-miterlimit="10" stroke-width="2" style="stroke-dasharray: 4, 6; stroke-dashoffset: 0;"></path>
+<path d="M7 36 L25 36 L25 46 L7 46 Z" fill="none" height="10" stroke="#000000" stroke-miterlimit="10" stroke-width="2" style="stroke-dasharray: 56, 58; stroke-dashoffset: 0;" width="18"></path>
+<path d="M6,12L32,12L40,20" fill="none" stroke="#000000" stroke-miterlimit="10" stroke-width="2" style="stroke-dasharray: 38, 40; stroke-dashoffset: 0;"></path>
+</g>
+</svg>
+</div>
+<h5 data-scroll-reveal="enter bottom move 100px over 1s after 0.3s">AWARDS AND RECOGNITIONS</h5>
+<p class="MsoNormal" data-scroll-reveal="enter bottom move 100px over 1s after 0.3s"><span style='font-family:"Times New Roman"'>Miloš Mihajlović has won top prizes at a number of international piano competitions. Highlights include:</span></p>
+<p class="MsoNormal"><span style="enable-background:new 0 0 48 48"> </span></p>
+<p class="MsoListParagraph" data-scroll-reveal="enter bottom move 100px over 1s after 0.3s" style="text-indent:-18.0pt"><span style="font-family:
+Symbol">·<span style='font:7.0pt "Times New Roman"'>     
 </span></span><span style="enable-background:new 0 0 48 48">Southern Highlands International Piano Competition, Sydney/Bowral, Australia (2009)</span></p><p class="MsoListParagraph" data-scroll-reveal="enter bottom move 100px over 1s after 0.3s" style="margin-left:18pt"><span>First Prize – Absolute Winner</span></p><p class="MsoListParagraph" data-scroll-reveal="enter bottom move 100px over 1s after 0.3s" style="margin-left:18pt"><span>Special Prize for Best Performance of a Chopin Etude</span></p><p class="MsoListParagraph" data-scroll-reveal="enter bottom move 100px over 1s after 0.3s" style="text-indent:-18.0pt"><span style="font-family:Symbol">·<span style='font:7.0pt "Times New Roman"'>     </span></span><span style="enable-background:new 0 0 48 48">Stanojlo Rajičić Fund Award, Serbian Academy of Sciences and Arts, Belgrade, Serbia (2005)</span></p><p class="MsoListParagraph" data-scroll-reveal="enter bottom move 100px over 1s after 0.3s" style="margin-left:18pt"><span>For the most distinguished recital of the concert season</span></p><p class="MsoListParagraph" data-scroll-reveal="enter bottom move 100px over 1s after 0.3s" style="text-indent:-18.0pt"><span style="font-family:Symbol">·<span style='font:7.0pt "Times New Roman"'>     </span></span><span style="enable-background:new 0 0 48 48">Grand Konzerteum International Piano Competition, Athens, Greece (1999)</span></p><p class="MsoListParagraph" data-scroll-reveal="enter bottom move 100px over 1s after 0.3s" style="margin-left:18pt"><span>Absolute Winner</span></p><p class="MsoListParagraph" data-scroll-reveal="enter bottom move 100px over 1s after 0.3s" style="margin-left:18pt"><span>Special Prize for Best Interpretation of a Chopin Composition</span></p><p class="MsoListParagraph" data-scroll-reveal="enter bottom move 100px over 1s after 0.3s" style="text-indent:-18.0pt"><span style="font-family:Symbol">·<span style='font:7.0pt "Times New Roman"'>     </span></span><span style="enable-background:new 0 0 48 48">Nueva Acropolis International Piano Competition, Madrid, Spain (1998)</span></p><p class="MsoListParagraph" data-scroll-reveal="enter bottom move 100px over 1s after 0.3s" style="margin-left:18pt"><span>First Prize</span></p><p class="MsoListParagraph" data-scroll-reveal="enter bottom move 100px over 1s after 0.3s" style="text-indent:-18.0pt"><span style="font-family:Symbol">·<span style='font:7.0pt "Times New Roman"'>     </span></span><span style="enable-background:new 0 0 48 48">Petar Konjović International Piano Competition, Belgrade, Serbia (1997)</span></p><p class="MsoListParagraph" data-scroll-reveal="enter bottom move 100px over 1s after 0.3s" style="margin-left:18pt"><span>First Prize</span></p><p class="MsoListParagraph" data-scroll-reveal="enter bottom move 100px over 1s after 0.3s" style="text-indent:-18.0pt"><span style="font-family:Symbol">·<span style='font:7.0pt "Times New Roman"'>     </span></span><span style="enable-background:new 0 0 48 48">Laureates of Orpheus International Piano Competition, Belgrade, Serbia (1996)</span></p><p class="MsoListParagraph" data-scroll-reveal="enter bottom move 100px over 1s after 0.3s" style="margin-left:18pt"><span>Winner of the competition</span></p><p class="MsoListParagraph" data-scroll-reveal="enter bottom move 100px over 1s after 0.3s" style="text-indent:-18.0pt"><span style="font-family:Symbol">·<span style='font:7.0pt "Times New Roman"'>     </span></span><span style="enable-background:new 0 0 48 48">Fryderyk Chopin Young Pianists Competition, Rome, Italy (1996)</span></p><p class="MsoListParagraph" data-scroll-reveal="enter bottom move 100px over 1s after 0.3s" style="margin-left:18pt"><span>First Prize</span></p><p class="MsoListParagraph" data-scroll-reveal="enter bottom move 100px over 1s after 0.3s" style="text-indent:-18.0pt"><span style="font-family:Symbol">·<span style='font:7.0pt "Times New Roman"'>     </span></span><span style="enable-background:new 0 0 48 48">Tortona International Piano Competition, Tortona, Italy (1995)</span></p><p class="MsoListParagraph" data-scroll-reveal="enter bottom move 100px over 1s after 0.3s" style="margin-left:18pt"><span>First Prize – Absolute Winner</span></p><p class="MsoListParagraph" data-scroll-reveal="enter bottom move 100px over 1s after 0.3s" style="text-indent:-18.0pt"><span style="font-family:Symbol">·<span style='font:7.0pt "Times New Roman"'>     </span></span><span style="enable-background:new 0 0 48 48">Torino/Moncalieri International Piano Competition, Italy (1995)</span></p><p class="MsoListParagraph" data-scroll-reveal="enter bottom move 100px over 1s after 0.3s" style="margin-left:18pt"><span>First Prize</span></p></div>
 <div class="twelve columns">
 <div class="about-wrap">
@@ -204,407 +217,372 @@ Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nb
 <path d="M38 25 L57 25 L57 41 L38 41 Z" fill="none" height="16" stroke="#000000" stroke-miterlimit="10" stroke-width="2" style="stroke-dasharray: 70, 72; stroke-dashoffset: 0;" width="19"></path>
 </svg>
 </div>
-							<h5 data-scroll-reveal="enter bottom move 100px over 1s after 0.3s">PERFORMANCE HIGHLIGHTS</h5>
-							<p data-scroll-reveal="enter bottom move 100px over 1s after 0.3s">
-							<p data-scroll-reveal="enter bottom move 100px over 1s after 0.3s" class=MsoNormal><span style='font-family:"Times New Roman"'>Miloš Mihajlović has performed at the following distinguished venues and festivals:</span></p>
-							<p data-scroll-reveal="enter bottom move 100px over 1s after 0.3s" class=MsoNormal><span style='enable-background:new 0 0 48 48'>&nbsp;</span></p>
-							<p data-scroll-reveal="enter bottom move 100px over 1s after 0.3s" class=MsoListParagraph style='enable-background:new 0 0 48 48'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span><span style='enable-background:new 0 0 48 48"'>Yuri Bashmet Festival, Yaroslavl, RUSSIA</span></p>
-							<p data-scroll-reveal="enter bottom move 100px over 1s after 0.3s" class=MsoListParagraph style='enable-background:new 0 0 48 48'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span><span style='enable-background:new 0 0 48 48"'>Yuri Bashmet Festival, Khabarovsk, RUSSIA</span></p>
-							<p data-scroll-reveal="enter bottom move 100px over 1s after 0.3s" class=MsoListParagraph style='enable-background:new 0 0 48 48'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span><span style='enable-background:new 0 0 48 48"'>Great Hall of the Mariinsky Theatre, St Petersburg, RUSSIA</span></p>
-							<p data-scroll-reveal="enter bottom move 100px over 1s after 0.3s" class=MsoListParagraph style='enable-background:new 0 0 48 48'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span><span style='enable-background:new 0 0 48 48"'>Great Hall of the Tchaikovsky Conservatory, Moscow, RUSSIA</span></p>
-							<p data-scroll-reveal="enter bottom move 100px over 1s after 0.3s" class=MsoListParagraph style='enable-background:new 0 0 48 48'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span><span style='enable-background:new 0 0 48 48"'>Great Hall of Kolarac Foundation, Belgrade, SERBIA</span></p>
-							<p data-scroll-reveal="enter bottom move 100px over 1s after 0.3s" class=MsoListParagraph style='enable-background:new 0 0 48 48'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span><span style='enable-background:new 0 0 48 48"'>Sava Centar – Great Hall, Belgrade, SERBIA</span></p>
-							<p data-scroll-reveal="enter bottom move 100px over 1s after 0.3s" class=MsoListParagraph style='enable-background:new 0 0 48 48'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span><span style='enable-background:new 0 0 48 48"'>National Philharmonic Hall, Warsaw, POLAND</span></p>
-							<p data-scroll-reveal="enter bottom move 100px over 1s after 0.3s" class=MsoListParagraph style='enable-background:new 0 0 48 48'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span><span style='enable-background:new 0 0 48 48"'>BEMUS Festival, Belgrade, SERBIA</span></p>
-							<p data-scroll-reveal="enter bottom move 100px over 1s after 0.3s" class=MsoListParagraph style='enable-background:new 0 0 48 48'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span><span style='enable-background:new 0 0 48 48"'>NIMUS Festival, Niš, SERBIA</span></p>
-							<p data-scroll-reveal="enter bottom move 100px over 1s after 0.3s" class=MsoListParagraph style='enable-background:new 0 0 48 48'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span><span style='enable-background:new 0 0 48 48"'>Act City Concert Hall, Hamamatsu, JAPAN</span></p>
-							<p data-scroll-reveal="enter bottom move 100px over 1s after 0.3s" class=MsoListParagraph style='enable-background:new 0 0 48 48'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span><span style='enable-background:new 0 0 48 48"'>Westminster Hall, Nice, FRANCE</span></p>
-							<p data-scroll-reveal="enter bottom move 100px over 1s after 0.3s" class=MsoListParagraph style='enable-background:new 0 0 48 48'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span><span style='enable-background:new 0 0 48 48"'>Opéra Comédie – Opéra Orchestre National Montpellier, Montpellier, FRANCE</span></p>
-							<p data-scroll-reveal="enter bottom move 100px over 1s after 0.3s" class=MsoListParagraph style='enable-background:new 0 0 48 48'><span style='font-family: Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span><span style='enable-background:new 0 0 48 48"'>Théâtre des Champs‑Élysées, Paris, FRANCE</span></p>
-							<p data-scroll-reveal="enter bottom move 100px over 1s after 0.3s" class=MsoListParagraph style='enable-background:new 0 0 48 48'><span style='font-family: Symbol' style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style='enable-background:new 0 0 48 48"'>(among others)</span></p>
-							<p data-scroll-reveal="enter bottom move 100px over 1s after 0.3s" class=MsoListParagraph><span style='font-family:"Times New Roman"'>&nbsp;</span></p>
-
-							<p data-scroll-reveal="enter bottom move 100px over 1s after 0.3s" class=MsoNormal><span style='font-family:"Times New Roman"'>Miloš Mihajlović refined his artistic perspective through collaboration with prominent conductors and artists. Notable names include:</span></p>
-							<p data-scroll-reveal="enter bottom move 100px over 1s after 0.3s" class=MsoNormal><span style='font-family:"Times New Roman"'>&nbsp;</span></p>
-
-							<p data-scroll-reveal="enter bottom move 100px over 1s after 0.3s" class=MsoListParagraph style='enable-background:new 0 0 48 48'><span style='font-family:
-Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<h5 data-scroll-reveal="enter bottom move 100px over 1s after 0.3s">PERFORMANCE HIGHLIGHTS</h5>
+<p data-scroll-reveal="enter bottom move 100px over 1s after 0.3s">
+<p class="MsoNormal" data-scroll-reveal="enter bottom move 100px over 1s after 0.3s"><span style='font-family:"Times New Roman"'>Miloš Mihajlović has performed at the following distinguished venues and festivals:</span></p>
+<p class="MsoNormal" data-scroll-reveal="enter bottom move 100px over 1s after 0.3s"><span style="enable-background:new 0 0 48 48"> </span></p>
+<p class="MsoListParagraph" data-scroll-reveal="enter bottom move 100px over 1s after 0.3s" style="enable-background:new 0 0 48 48"><span style="font-family: Symbol">·<span style='font:7.0pt "Times New Roman"'>     </span></span><span style='enable-background:new 0 0 48 48"'>Yuri Bashmet Festival, Yaroslavl, RUSSIA</span></p>
+<p class="MsoListParagraph" data-scroll-reveal="enter bottom move 100px over 1s after 0.3s" style="enable-background:new 0 0 48 48"><span style="font-family: Symbol">·<span style='font:7.0pt "Times New Roman"'>     </span></span><span style='enable-background:new 0 0 48 48"'>Yuri Bashmet Festival, Khabarovsk, RUSSIA</span></p>
+<p class="MsoListParagraph" data-scroll-reveal="enter bottom move 100px over 1s after 0.3s" style="enable-background:new 0 0 48 48"><span style="font-family: Symbol">·<span style='font:7.0pt "Times New Roman"'>     </span></span><span style='enable-background:new 0 0 48 48"'>Great Hall of the Mariinsky Theatre, St Petersburg, RUSSIA</span></p>
+<p class="MsoListParagraph" data-scroll-reveal="enter bottom move 100px over 1s after 0.3s" style="enable-background:new 0 0 48 48"><span style="font-family: Symbol">·<span style='font:7.0pt "Times New Roman"'>     </span></span><span style='enable-background:new 0 0 48 48"'>Great Hall of the Tchaikovsky Conservatory, Moscow, RUSSIA</span></p>
+<p class="MsoListParagraph" data-scroll-reveal="enter bottom move 100px over 1s after 0.3s" style="enable-background:new 0 0 48 48"><span style="font-family: Symbol">·<span style='font:7.0pt "Times New Roman"'>     </span></span><span style='enable-background:new 0 0 48 48"'>Great Hall of Kolarac Foundation, Belgrade, SERBIA</span></p>
+<p class="MsoListParagraph" data-scroll-reveal="enter bottom move 100px over 1s after 0.3s" style="enable-background:new 0 0 48 48"><span style="font-family: Symbol">·<span style='font:7.0pt "Times New Roman"'>     </span></span><span style='enable-background:new 0 0 48 48"'>Sava Centar – Great Hall, Belgrade, SERBIA</span></p>
+<p class="MsoListParagraph" data-scroll-reveal="enter bottom move 100px over 1s after 0.3s" style="enable-background:new 0 0 48 48"><span style="font-family: Symbol">·<span style='font:7.0pt "Times New Roman"'>     </span></span><span style='enable-background:new 0 0 48 48"'>National Philharmonic Hall, Warsaw, POLAND</span></p>
+<p class="MsoListParagraph" data-scroll-reveal="enter bottom move 100px over 1s after 0.3s" style="enable-background:new 0 0 48 48"><span style="font-family: Symbol">·<span style='font:7.0pt "Times New Roman"'>     </span></span><span style='enable-background:new 0 0 48 48"'>BEMUS Festival, Belgrade, SERBIA</span></p>
+<p class="MsoListParagraph" data-scroll-reveal="enter bottom move 100px over 1s after 0.3s" style="enable-background:new 0 0 48 48"><span style="font-family: Symbol">·<span style='font:7.0pt "Times New Roman"'>     </span></span><span style='enable-background:new 0 0 48 48"'>NIMUS Festival, Niš, SERBIA</span></p>
+<p class="MsoListParagraph" data-scroll-reveal="enter bottom move 100px over 1s after 0.3s" style="enable-background:new 0 0 48 48"><span style="font-family: Symbol">·<span style='font:7.0pt "Times New Roman"'>     </span></span><span style='enable-background:new 0 0 48 48"'>Act City Concert Hall, Hamamatsu, JAPAN</span></p>
+<p class="MsoListParagraph" data-scroll-reveal="enter bottom move 100px over 1s after 0.3s" style="enable-background:new 0 0 48 48"><span style="font-family: Symbol">·<span style='font:7.0pt "Times New Roman"'>     </span></span><span style='enable-background:new 0 0 48 48"'>Westminster Hall, Nice, FRANCE</span></p>
+<p class="MsoListParagraph" data-scroll-reveal="enter bottom move 100px over 1s after 0.3s" style="enable-background:new 0 0 48 48"><span style="font-family: Symbol">·<span style='font:7.0pt "Times New Roman"'>     </span></span><span style='enable-background:new 0 0 48 48"'>Opéra Comédie – Opéra Orchestre National Montpellier, Montpellier, FRANCE</span></p>
+<p class="MsoListParagraph" data-scroll-reveal="enter bottom move 100px over 1s after 0.3s" style="enable-background:new 0 0 48 48"><span style="font-family: Symbol">·<span style='font:7.0pt "Times New Roman"'>     </span></span><span style='enable-background:new 0 0 48 48"'>Théâtre des Champs‑Élysées, Paris, FRANCE</span></p>
+<p class="MsoListParagraph" data-scroll-reveal="enter bottom move 100px over 1s after 0.3s" style="enable-background:new 0 0 48 48"><span style='font:7.0pt "Times New Roman"'>     </span><span style='enable-background:new 0 0 48 48"'>(among others)</span></p>
+<p class="MsoListParagraph" data-scroll-reveal="enter bottom move 100px over 1s after 0.3s"><span style='font-family:"Times New Roman"'> </span></p>
+<p class="MsoNormal" data-scroll-reveal="enter bottom move 100px over 1s after 0.3s"><span style='font-family:"Times New Roman"'>Miloš Mihajlović refined his artistic perspective through collaboration with prominent conductors and artists. Notable names include:</span></p>
+<p class="MsoNormal" data-scroll-reveal="enter bottom move 100px over 1s after 0.3s"><span style='font-family:"Times New Roman"'> </span></p>
+<p class="MsoListParagraph" data-scroll-reveal="enter bottom move 100px over 1s after 0.3s" style="enable-background:new 0 0 48 48"><span style="font-family:
+Symbol">·<span style='font:7.0pt "Times New Roman"'>     
 </span></span><span style='enable-background:new 0 0 48 48"'>Yuri Bashmet – conductor, violinist, violist</span></p>
-
-							<p data-scroll-reveal="enter bottom move 100px over 1s after 0.3s" class=MsoListParagraph style='enable-background:new 0 0 48 48'><span style='font-family:
-Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<p class="MsoListParagraph" data-scroll-reveal="enter bottom move 100px over 1s after 0.3s" style="enable-background:new 0 0 48 48"><span style="font-family:
+Symbol">·<span style='font:7.0pt "Times New Roman"'>     
 </span></span><span style='enable-background:new 0 0 48 48"'>Nemanja Radulović – violinist</span></p>
-
-							<p data-scroll-reveal="enter bottom move 100px over 1s after 0.3s" class=MsoListParagraph style='enable-background:new 0 0 48 48'><span style='font-family:
-Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span><span style='enable-background:new 0 0 48 48"'>Uroš Lajovic – conductor</span></p>	
-							
-							<p data-scroll-reveal="enter bottom move 100px over 1s after 0.3s" class=MsoListParagraph style='enable-background:new 0 0 48 48'><span style='font-family:
-Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<p class="MsoListParagraph" data-scroll-reveal="enter bottom move 100px over 1s after 0.3s" style="enable-background:new 0 0 48 48"><span style="font-family:
+Symbol">·<span style='font:7.0pt "Times New Roman"'>     
+</span></span><span style='enable-background:new 0 0 48 48"'>Uroš Lajovic – conductor</span></p>
+<p class="MsoListParagraph" data-scroll-reveal="enter bottom move 100px over 1s after 0.3s" style="enable-background:new 0 0 48 48"><span style="font-family:
+Symbol">·<span style='font:7.0pt "Times New Roman"'>     
 </span></span><span style='enable-background:new 0 0 48 48"'>Davorin Mori – conductor</span></p>
-
-							<p data-scroll-reveal="enter bottom move 100px over 1s after 0.3s" class=MsoListParagraph style='enable-background:new 0 0 48 48'><span style='font-family:
-Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<p class="MsoListParagraph" data-scroll-reveal="enter bottom move 100px over 1s after 0.3s" style="enable-background:new 0 0 48 48"><span style="font-family:
+Symbol">·<span style='font:7.0pt "Times New Roman"'>     
 </span></span><span style='enable-background:new 0 0 48 48"'>Sergei Dorensky – pianist</span></p>
-
-							<p data-scroll-reveal="enter bottom move 100px over 1s after 0.3s" class=MsoListParagraph style='enable-background:new 0 0 48 48'><span style='font-family:
-Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<p class="MsoListParagraph" data-scroll-reveal="enter bottom move 100px over 1s after 0.3s" style="enable-background:new 0 0 48 48"><span style="font-family:
+Symbol">·<span style='font:7.0pt "Times New Roman"'>     
 </span></span><span style='enable-background:new 0 0 48 48"'>Alexander Shtarkman – pianist</span></p>
-
-							<p data-scroll-reveal="enter bottom move 100px over 1s after 0.3s" class=MsoListParagraph style='enable-background:new 0 0 48 48'><span style='font-family:
-Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<p class="MsoListParagraph" data-scroll-reveal="enter bottom move 100px over 1s after 0.3s" style="enable-background:new 0 0 48 48"><span style="font-family:
+Symbol">·<span style='font:7.0pt "Times New Roman"'>     
 </span></span><span style='enable-background:new 0 0 48 48"'>Michel Dalberto – pianist</span></p>
-
-							<p data-scroll-reveal="enter bottom move 100px over 1s after 0.3s" class=MsoListParagraph style='enable-background:new 0 0 48 48'><span style='font-family:
-Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<p class="MsoListParagraph" data-scroll-reveal="enter bottom move 100px over 1s after 0.3s" style="enable-background:new 0 0 48 48"><span style="font-family:
+Symbol">·<span style='font:7.0pt "Times New Roman"'>     
 </span></span><span style='enable-background:new 0 0 48 48"'>Mladen Jagušt – conductor</span></p>
-
-							<p data-scroll-reveal="enter bottom move 100px over 1s after 0.3s" class=MsoListParagraph style='enable-background:new 0 0 48 48'><span style='font-family:
-Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<p class="MsoListParagraph" data-scroll-reveal="enter bottom move 100px over 1s after 0.3s" style="enable-background:new 0 0 48 48"><span style="font-family:
+Symbol">·<span style='font:7.0pt "Times New Roman"'>     
 </span></span><span style='enable-background:new 0 0 48 48"'>Carlos Alvarado – conductor</span></p>
-
-							<p data-scroll-reveal="enter bottom move 100px over 1s after 0.3s" class=MsoListParagraph style='enable-background:new 0 0 48 48'><span style='font-family:
-Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<p class="MsoListParagraph" data-scroll-reveal="enter bottom move 100px over 1s after 0.3s" style="enable-background:new 0 0 48 48"><span style="font-family:
+Symbol">·<span style='font:7.0pt "Times New Roman"'>     
 </span></span><span style='enable-background:new 0 0 48 48"'>Angel Šurev – conductor</span></p>
-
-							<p data-scroll-reveal="enter bottom move 100px over 1s after 0.3s" class=MsoListParagraph style='enable-background:new 0 0 48 48'><span style='font-family:
-Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<p class="MsoListParagraph" data-scroll-reveal="enter bottom move 100px over 1s after 0.3s" style="enable-background:new 0 0 48 48"><span style="font-family:
+Symbol">·<span style='font:7.0pt "Times New Roman"'>     
 </span></span><span style='enable-background:new 0 0 48 48"'>Dejan Savić – conductor</span></p>
-
-							<p data-scroll-reveal="enter bottom move 100px over 1s after 0.3s" class=MsoListParagraph style='enable-background:new 0 0 48 48'><span style='font-family:
-Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<p class="MsoListParagraph" data-scroll-reveal="enter bottom move 100px over 1s after 0.3s" style="enable-background:new 0 0 48 48"><span style="font-family:
+Symbol">·<span style='font:7.0pt "Times New Roman"'>     
 </span></span><span style='enable-background:new 0 0 48 48"'>Darinka Matić Marović – conductor</span></p>
-
-							<p data-scroll-reveal="enter bottom move 100px over 1s after 0.3s" class=MsoListParagraph style='enable-background:new 0 0 48 48'><span style='font-family:
-Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<p class="MsoListParagraph" data-scroll-reveal="enter bottom move 100px over 1s after 0.3s" style="enable-background:new 0 0 48 48"><span style="font-family:
+Symbol">·<span style='font:7.0pt "Times New Roman"'>     
 </span></span><span style='enable-background:new 0 0 48 48"'>Anatolij Novicki – conductor</span></p>
-
-							<p data-scroll-reveal="enter bottom move 100px over 1s after 0.3s" class=MsoListParagraph style='enable-background:new 0 0 48 48'><span style='font-family:
-Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<p class="MsoListParagraph" data-scroll-reveal="enter bottom move 100px over 1s after 0.3s" style="enable-background:new 0 0 48 48"><span style="font-family:
+Symbol">·<span style='font:7.0pt "Times New Roman"'>     
 </span></span><span style='enable-background:new 0 0 48 48"'>Grant Foster – composer</span></p>
-
-						</div>
-					</div>
-					<div class="twelve columns" >
-						<div class="about-wrap">
-							<div class="about-icon">
-								<svg version="1.1" id="svg-icon-4" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="48px" height="48px" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
-								<path fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" width="62" height="50" d="M1 7 L63 7 L63 57 L1 57 Z" style="stroke-dasharray: 224, 226; stroke-dashoffset: 0;"></path>
-								<path fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" d="M1,15L63,15" style="stroke-dasharray: 62, 64; stroke-dashoffset: 0;"></path>
-								<path fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" d="M10,11L6,11" style="stroke-dasharray: 4, 6; stroke-dashoffset: 0;"></path>
-								<path fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" d="M18,11L14,11" style="stroke-dasharray: 4, 6; stroke-dashoffset: 0;"></path>
-								<path fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" d="M26,11L22,11" style="stroke-dasharray: 4, 6; stroke-dashoffset: 0;"></path>
-								<path fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" d="M6,25L33,25" style="stroke-dasharray: 27, 29; stroke-dashoffset: 0;"></path>
-								<path fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" d="M6,33L33,33" style="stroke-dasharray: 27, 29; stroke-dashoffset: 0;"></path>
-								<path fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" d="M6,41L33,41" style="stroke-dasharray: 27, 29; stroke-dashoffset: 0;"></path>
-								<path fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" width="19" height="16" d="M38 25 L57 25 L57 41 L38 41 Z" style="stroke-dasharray: 70, 72; stroke-dashoffset: 0;"></path>
-								</svg>
-							</div>
-							<h5 data-scroll-reveal="enter bottom move 100px over 1s after 0.3s">TEACHING CAREER</h5>
-							<p data-scroll-reveal="enter bottom move 100px over 1s after 0.3s">
-							<p class=MsoNormal><span style='font-family:"Times New Roman"'>&nbsp;</span></p>
-
-							<p data-scroll-reveal="enter bottom move 100px over 1s after 0.3s" class=MsoListParagraph style='enable-background:new 0 0 48 48'><span style='font-family:
-Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</p></div>
+</div>
+<div class="twelve columns">
+<div class="about-wrap">
+<div class="about-icon">
+<svg enable-background="new 0 0 64 64" height="48px" id="svg-icon-4" version="1.1" viewbox="0 0 64 64" width="48px" x="0px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0px">
+<path d="M1 7 L63 7 L63 57 L1 57 Z" fill="none" height="50" stroke="#000000" stroke-miterlimit="10" stroke-width="2" style="stroke-dasharray: 224, 226; stroke-dashoffset: 0;" width="62"></path>
+<path d="M1,15L63,15" fill="none" stroke="#000000" stroke-miterlimit="10" stroke-width="2" style="stroke-dasharray: 62, 64; stroke-dashoffset: 0;"></path>
+<path d="M10,11L6,11" fill="none" stroke="#000000" stroke-miterlimit="10" stroke-width="2" style="stroke-dasharray: 4, 6; stroke-dashoffset: 0;"></path>
+<path d="M18,11L14,11" fill="none" stroke="#000000" stroke-miterlimit="10" stroke-width="2" style="stroke-dasharray: 4, 6; stroke-dashoffset: 0;"></path>
+<path d="M26,11L22,11" fill="none" stroke="#000000" stroke-miterlimit="10" stroke-width="2" style="stroke-dasharray: 4, 6; stroke-dashoffset: 0;"></path>
+<path d="M6,25L33,25" fill="none" stroke="#000000" stroke-miterlimit="10" stroke-width="2" style="stroke-dasharray: 27, 29; stroke-dashoffset: 0;"></path>
+<path d="M6,33L33,33" fill="none" stroke="#000000" stroke-miterlimit="10" stroke-width="2" style="stroke-dasharray: 27, 29; stroke-dashoffset: 0;"></path>
+<path d="M6,41L33,41" fill="none" stroke="#000000" stroke-miterlimit="10" stroke-width="2" style="stroke-dasharray: 27, 29; stroke-dashoffset: 0;"></path>
+<path d="M38 25 L57 25 L57 41 L38 41 Z" fill="none" height="16" stroke="#000000" stroke-miterlimit="10" stroke-width="2" style="stroke-dasharray: 70, 72; stroke-dashoffset: 0;" width="19"></path>
+</svg>
+</div>
+<h5 data-scroll-reveal="enter bottom move 100px over 1s after 0.3s">TEACHING CAREER</h5>
+<p data-scroll-reveal="enter bottom move 100px over 1s after 0.3s">
+<p class="MsoNormal"><span style='font-family:"Times New Roman"'> </span></p>
+<p class="MsoListParagraph" data-scroll-reveal="enter bottom move 100px over 1s after 0.3s" style="enable-background:new 0 0 48 48"><span style="font-family:
+Symbol">·<span style='font:7.0pt "Times New Roman"'>     
 </span></span><span style='enable-background:new 0 0 48 48"'>Full Professor, Piano Division, Faculty of Music, University of Arts in Belgrade, Serbia, since June 2023</span></p>
-							<p data-scroll-reveal="enter bottom move 100px over 1s after 0.3s" class=MsoListParagraph style='enable-background:new 0 0 48 48'><span style='font-family:
-Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<p class="MsoListParagraph" data-scroll-reveal="enter bottom move 100px over 1s after 0.3s" style="enable-background:new 0 0 48 48"><span style="font-family:
+Symbol">·<span style='font:7.0pt "Times New Roman"'>     
 </span></span><span style='enable-background:new 0 0 48 48"'>Associate Professor, Piano Division, Faculty of Music, University of Arts in Belgrade, Serbia, April 2014 – June 2023</span></p>
-
-							<p data-scroll-reveal="enter bottom move 100px over 1s after 0.3s" class=MsoListParagraph style='enable-background:new 0 0 48 48'><span style='font-family:
-Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<p class="MsoListParagraph" data-scroll-reveal="enter bottom move 100px over 1s after 0.3s" style="enable-background:new 0 0 48 48"><span style="font-family:
+Symbol">·<span style='font:7.0pt "Times New Roman"'>     
 </span></span><span style='enable-background:new 0 0 48 48"'>Assistant Professor, Piano Division, Faculty of Music, University of Arts in Belgrade, Serbia, April 2005 – April 2014</span></p>
-
-							<p data-scroll-reveal="enter bottom move 100px over 1s after 0.3s" class=MsoListParagraph style='enable-background:new 0 0 48 48'><span style='font-family:
-Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<p class="MsoListParagraph" data-scroll-reveal="enter bottom move 100px over 1s after 0.3s" style="enable-background:new 0 0 48 48"><span style="font-family:
+Symbol">·<span style='font:7.0pt "Times New Roman"'>     
 </span></span><span style='enable-background:new 0 0 48 48"'>Head Teaching Fellow, Piano Division, Faculty of Music, University of Arts in Belgrade, Serbia (under Professor Nevena Popović), 2001–2005</span></p>
-
-							<p data-scroll-reveal="enter bottom move 100px over 1s after 0.3s" class=MsoListParagraph style='enable-background:new 0 0 48 48'><span style='font-family:
-Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<p class="MsoListParagraph" data-scroll-reveal="enter bottom move 100px over 1s after 0.3s" style="enable-background:new 0 0 48 48"><span style="font-family:
+Symbol">·<span style='font:7.0pt "Times New Roman"'>     
 </span></span><span style='enable-background:new 0 0 48 48"'>Head Teaching Fellow, Academy of Arts in Banja Luka, Bosnia and Herzegovina (under Professor Nevena Popović), 2000–2001</span></p>
-						</div>
-					</div>
-				</div>
-			</div>	
-		</div>
-		
-		
-		<div class="section back-dark2" id="media">
-			<div class="section padding-top">
-				<div class="container">
-					<div class="twelve columns">
-						<div class="title-text left">
-							<p>I do MAGIC.<span>I do... MUSIC!</span></p>
-							<h3>I take pride in delivering only the best of me, so I can share my passion with you.</h3>
-							</div>
-						<div class="title-text left">
-							<h3>Stay tuned!</h3>
-							<p>Enjoy your staying<span>have a nice time</span></p>
-						</div>
-					</div>					
-				</div>
-					
-				<div class="clear"></div>
-
-				<div class="section">
-					<div id="portfolio-filter">
-						<ul id="filter">
-							<li><a href="#" class="current" data-filter="*" title="">all</a></li>
-							<li class="tipped" data-title="6 projects" data-tipper-options='{"direction":"top","follow":"true"}'><a href="#" data-filter=".classical" title="">Classical</a></li>
-							<li class="tipped" data-title="6 projects" data-tipper-options='{"direction":"top","follow":"true"}'><a href="#" data-filter=".popular" title="">Popular</a></li>
-							<li class="tipped" data-title="5 projects" data-tipper-options='{"direction":"top","follow":"true"}'><a href="#" data-filter=".ethno" title="">Ethno</a></li>
-						</ul>
-					</div>
-					
-					<div id="projects-grid">
-						<a class="fancybox fancybox.iframe tipped" href="https://www.youtube.com/embed/videoseries?list=OLAK5uy_mI8hoCKUL134V2eh4ANGR53H10QPpje9M&si=sVo1T8k6joS-YYF_&rel=0&showinfo=0&autoplay=1" data-title="classical" data-tipper-options='{"direction":"top","follow":"true"}'>
-							<div class="portfolio-box-1 classical">
-								<div class="mask"></div>
-								<h3><span>Chopin</span><br>4 SCHERZI</h3>
-								<img src="images/portfolio/Chopin.jpg" alt="">
-							</div>
-						</a>
-						<a class="fancybox fancybox.iframe tipped" href="https://www.youtube.com/embed/videoseries?list=OLAK5uy_n5hdrLBG45kX8ReGO3d9jhMzRJ6NS-xcQ&si=Cs28dPuVfgu9w6Cp&rel=0&showinfo=0&autoplay=1" data-title="classical" data-tipper-options='{"direction":"top","follow":"true"}'>
-							<div class="portfolio-box-1 classical">
-								<div class="mask"></div>
-								<h3><span>Mussorgsky</span><br>Pictures at an exhibition</h3>
-								<img src="images/portfolio/Mussorgsky.jpg" alt="">
-							</div>
-						</a>
-						<a class="fancybox fancybox.iframe tipped" href="https://www.youtube.com/embed/videoseries?list=OLAK5uy_m9B2sVXjROjvS7c8wipNaHUBOoowlaPLQ&si=njSMIg1sojwUi16o&rel=0&showinfo=0&autoplay=1" data-title="classical" data-tipper-options='{"direction":"top","follow":"true"}'>
-							<div class="portfolio-box-1 classical">
-								<div class="mask"></div>
-								<h3><span>Rachmaninoff: Moments musicaux op.16</span><br>No. 3 in B Minor - Andante cantabile</h3>
-								<img src="images/portfolio/Rachmaninoff.jpg" alt="">
-							</div>
-						</a>
-						<a class="fancybox fancybox.iframe tipped" href="https://www.youtube.com/embed/i30OLiGcjss?rel=0&amp;showinfo=0;byline=0&amp;portrait=0&amp;autoplay=1&amp;color=cfa144" data-title="classical" data-tipper-options='{"direction":"top","follow":"true"}'>
-							<div class="portfolio-box-1 classical">
-								<div class="mask"></div>
-								<h3><span>P.I.Tchaikovsky</span><br>Piano concerto No.1 I movement</h3>
-								<img src="images/portfolio/1.jpg" alt="">
-							</div>
-						</a>
-						<a class="fancybox fancybox.iframe tipped" href="https://www.youtube.com/embed/VBiWqJp62ow?rel=0&amp;showinfo=0;byline=0&amp;portrait=0&amp;autoplay=1&amp;color=cfa144" data-title="classical" data-tipper-options='{"direction":"top","follow":"true"}'>
-							<div class="portfolio-box-1 classical">
-								<div class="mask"></div>
-								<h3><span>P.I.Tchaikovsky</span><br>Piano concerto No.1 II movement</h3>
-								<img src="images/portfolio/1a.jpg" alt="">
-							</div>
-						</a>
-						<a class="fancybox fancybox.iframe tipped" href="https://www.youtube.com/embed/Uc8o8Rq7780?rel=0&amp;showinfo=0;byline=0&amp;portrait=0&amp;autoplay=1&amp;color=cfa144" data-title="classical" data-tipper-options='{"direction":"top","follow":"true"}'>
-							<div class="portfolio-box-1 classical">
-								<div class="mask"></div>
-								<h3><span>P.I.Tchaikovsky</span><br>Piano concerto No.1 III movement</h3>
-								<img src="images/portfolio/1b.jpg" alt="">
-							</div>
-						</a>
-						<a class="fancybox fancybox.iframe tipped" href="https://www.youtube.com/embed/2MK2Qz0CQl8?rel=0&amp;showinfo=0;byline=0&amp;portrait=0&amp;autoplay=1&amp;color=cfa144" data-title="popular" data-tipper-options='{"direction":"top","follow":"true"}'>
-							<div class="portfolio-box-1 popular">
-								<div class="mask"></div>
-								<h3><span>Piano Instrumental</span><br>Somewhere over the rainbow</h3>
-								<img src="images/portfolio/9.jpg" alt="">
-							</div>
-						</a>
-						<a class="fancybox fancybox.iframe tipped" href="https://www.youtube.com/embed/h4bZRcJXZJY?rel=0&amp;showinfo=0;byline=0&amp;portrait=0&amp;autoplay=1&amp;color=cfa144" data-title="classical" data-tipper-options='{"direction":"top","follow":"true"}'>
-							<div class="portfolio-box-1 classical">
-								<div class="mask"></div>
-								<h3><span>F.Chopin</span><br>Ballade No.1 op.23 in g minor</h3>
-								<img src="images/portfolio/milos-mihajlovic-ballade-n.1.jpg" alt="">
-							</div>
-						<a class="fancybox fancybox.iframe tipped" href="https://www.youtube.com/embed/1BGR9AsuASk?rel=0&amp;showinfo=0;byline=0&amp;portrait=0&amp;autoplay=1&amp;color=cfa144" data-title="classical" data-tipper-options='{"direction":"top","follow":"true"}'>
-							<div class="portfolio-box-1 classical">
-								<div class="mask"></div>
-								<h3><span>F.Chopin</span><br>Ballade No.3 op.47 in A-flat Major</h3>
-								<img src="images/portfolio/milos-mihajlovic-ballade-n.3.jpg" alt="">
-							</div>
-						</a>
-						</a>
-						<a class="fancybox fancybox.iframe tipped" href="https://www.youtube.com/embed/ZiTDj_PCMNU?rel=0&amp;showinfo=0;byline=0&amp;portrait=0&amp;autoplay=1&amp;color=cfa144" data-title="popular" data-tipper-options='{"direction":"top","follow":"true"}'>
-							<div class="portfolio-box-1 popular">
-								<div class="mask"></div>
-								<h3><span>Iva Ikon & Miloš Mihajlović</span><br>Once I Was Loved / Cover</h3>
-								<img src="images/portfolio/5a.jpg" alt="">
-							</div>
-						</a>
-						<a class="fancybox fancybox.iframe tipped" href="https://www.youtube.com/embed/6UYqlva4cbM?rel=0&amp;showinfo=0;byline=0&amp;portrait=0&amp;autoplay=1&amp;color=cfa144" data-title="classical" data-tipper-options='{"direction":"top","follow":"true"}'>
-							<div class="portfolio-box-1 classical">
-								<div class="mask"></div>
-								<h3><span>F.Chopin</span><br>Andante Spianato & Grande Polonaise Brillande op.22</h3>
-								<img src="images/portfolio/6.jpg" alt="">
-							</div>
-						</a>
-						<a class="fancybox fancybox.iframe tipped" href="https://www.youtube.com/embed/videoseries?list=OLAK5uy_mKxBuluOMashR3QlNrjfijzwCbMIl05Y8&si=BYhYiLcv1EhiPs5Q&rel=0&showinfo=0&autoplay=1" data-title="ethno" data-tipper-options='{"direction":"top","follow":"true"}'>
-							<div class="portfolio-box-1 ethno">
-							<div class="mask"></div>
-							<h3><span>Ethno Essentials</span><br/>ALBUM</h3>
-							<img  src="images/portfolio/EthnoEssentials.jpg" alt=""/>
-							</div>
-						</a>
-						<a class="fancybox fancybox.iframe tipped" href="https://www.youtube.com/embed/videoseries?list=OLAK5uy_nJywPEI8c8u4Bk_qG3TiZX2uAAnnzHmTA&si=kYMMxAabKzNq7SYD&rel=0&showinfo=0&autoplay=1" data-title="ethno" data-tipper-options='{"direction":"top","follow":"true"}'>
-							<div class="portfolio-box-1 ethno">
-							<div class="mask"></div>
-							<h3><span>Ethno Essentials vol. 2</span><br/>ALBUM</h3>
-							<img  src="images/portfolio/EthnoEssentials2.jpg" alt=""/>
-							</div>
-						</a>
-						<a class="fancybox fancybox.iframe tipped" href="https://www.youtube.com/embed/videoseries?list=OLAK5uy_kMfKN7m-DS3hDEZc56e3KU5P0ptlaHDk4&si=DhXthr1rfDMGJyyf&rel=0&showinfo=0&autoplay=1" data-title="ethno" data-tipper-options='{"direction":"top","follow":"true"}'>
-							<div class="portfolio-box-1 ethno">
-							<div class="mask"></div>
-							<h3><span>This is Balkan</span><br/>ALBUM</h3>
-							<img  src="images/portfolio/ThisisBalkan.jpg" alt=""/>
-							</div>
-						</a>
-						<a class="fancybox fancybox.iframe tipped" href="https://www.youtube.com/embed/videoseries?list=OLAK5uy_kQYyrmSIVaU79zR_AIOapw-N1AbdekuUk&si=8-jTGi1iWhQnivpe&rel=0&showinfo=0&autoplay=1" data-title="ethno" data-tipper-options='{"direction":"top","follow":"true"}'>
-							<div class="portfolio-box-1 ethno">
-							<div class="mask"></div>
-							<h3><span>Essentially Ethnic Piano</span><br/>ALBUM</h3>
-							<img  src="images/portfolio/Eep.jpg" alt=""/>
-							</div>
-						</a>
-						<a class="fancybox fancybox.iframe tipped" href="https://www.youtube.com/embed/bSIkZsA6uDY?rel=0&amp;showinfo=0;byline=0&amp;portrait=0&amp;autoplay=1&amp;color=cfa144" data-title="ethno" data-tipper-options='{"direction":"top","follow":"true"}'>
-							<div class="portfolio-box-1 ethno">
-								<div class="mask"></div>
-								<h3><span>Jasna Kočijašević & Miloš Mihajlović</span><br>Kraj tanana šadrvana</h3>
-								<img src="images/portfolio/8.jpg" alt="">
-							</div>
-						</a>
-						<a class="fancybox fancybox.iframe tipped" href="https://www.youtube.com/embed/ayJCPOMAuvs?rel=0&amp;showinfo=0;byline=0&amp;portrait=0&amp;autoplay=1&amp;color=cfa144" data-title="classical" data-tipper-options='{"direction":"top","follow":"true"}'>
-							<div class="portfolio-box-1 classical">
-								<div class="mask"></div>
-								<h3><span>S.Rachmaninoff</span><br>Prelude op.32 No.12</h3>
-								<img src="images/portfolio/2.jpg" alt="">
-							</div>
-						</a>
-						<a class="fancybox fancybox.iframe tipped" href="https://www.youtube.com/embed/OjE9HLzSY3g?rel=0&amp;showinfo=0;byline=0&amp;portrait=0&amp;autoplay=1&amp;color=cfa144" data-title="classical" data-tipper-options='{"direction":"top","follow":"true"}'>
-							<div class="portfolio-box-1 classical">
-								<div class="mask"></div>
-								<h3><span>W.A.Mozart</span><br>Sonata a-minor K.310</h3>
-								<img src="images/portfolio/12.jpg" alt="">
-							</div>
-						</a>
-						
-					</div>
-				</div>				
-				
-				
-			</div>
-		
-
-		<div class="section full-height" id="quote">
-				<div id="video-wrap">
-					<video id="video_background" preload="auto" autoplay="true" loop="loop" muted="muted" volume="0" poster="videos/mmwebja.jpg"> 
-						<source src="videos/mmwebja.webm" type="video/webm"> 
-						<source src="videos/mmwebja.mp4" type="video/mp4"> 
-						<source src="videos/mmwebja.ogg" type="video/ogg"> 
-					</video>
-				</div>
-				<div class="dark-over-sep"></div>
-			<div class="page-center-text">
-				<div class="container">
-					<div class="twelve columns" data-scroll-reveal="enter bottom move 100px over 1s after 0.3s">
-						<div id="owl-sep-1" class="owl-carousel owl-theme">						 
-							<div class="item">					
-								<div class="quote">
-									<h4>"Music is a funny word. Some people think music means how it sounds. Then... you dig deeper - it's really how it feels."</h4>
-								</div>									
-							</div>
-							<div class="item">				
-								<div class="quote">
-									<h4>"Serb pianist Milos Mihajlovic earned a standing ovation from the Clubbe Hall audience in addition to his $20,000 prize when he was named the winner of the 2009 Southern Highlands International Piano Competition (SHIPC) on Saturday evening. The judging panel took only minutes to declare Mihajlovic the winner after the four finalists’ concerto performances"</h4>
-								</div>										
-							</div>	
-							<div class="item">	
-								<div class="quote">	
-									<h4>"His playing is shaped by an assured technique and genuine interpretive insights, however, his credentials are appreciated on their own merits, and the risks are justified!"</h4>
-								</div>											
-							</div>	
-							<div class="item">	
-								<div class="quote">	
-									<h4>"Equally impressive, though, is his respect for the emotional nuances of the music, every shift in mood rendered poetically but without distorting the musical continuity.  Mr. Mihajlović’s playing proves as eloquently as that of any pianist in recent memory that the greatest test of a musician’s artistry is to perform in a manner that allows the music at hand to be heard on its own terms."</h4>
-								</div>											
-							</div>	
-							<div class="item">	
-								<div class="quote">	
-									<h4>"With his playing of these pieces, Mr. Mihajlović rivals the best performances of this repertory by allowing the listener to hear, unencumbered, the voice of a composer!"</h4>
-								</div>											
-							</div>				 
-						</div>
-					</div>
-				</div>	
-			</div>
-		</div>		
-		
-		
-		<div class="section padding-top-bottom">
-				<div class="parallax-2"></div>
-				<div class="dark-over-sep"></div>
-				<div class="container z-bigger">
-					<div class="twelve columns">
-						<div id="owl-logos" class="owl-carousel owl-theme">											 
-							<div class="item">
-								<img  src="images/logos/white1.png" alt="" />
-							</div>											
-							<div class="item">
-								<img  src="images/logos/white2.png" alt="" />
-							</div>											
-							<div class="item"> 
-								<img  src="images/logos/white3.png" alt="" />
-							</div>											 
-							<div class="item">
-								<img  src="images/logos/white4.png" alt="" />
-							</div>											
-							<div class="item">
-								<img  src="images/logos/white5.png" alt="" />
-							</div>											
-							<div class="item"> 
-								<img  src="images/logos/white6.png" alt="" />
-							</div>
-							<div class="item"> 
-								<img  src="images/logos/white7.png" alt="" />
-							</div>		
-							<div class="item"> 
-								<img  src="images/logos/white8.png" alt="" />
-							</div>		
-							<div class="item"> 
-								<img  src="images/logos/white9.png" alt="" />
-							</div>		
-							<div class="item"> 
-								<img  src="images/logos/white10.png" alt="" />
-							</div>		
-							<div class="item"> 
-								<img  src="images/logos/white11.png" alt="" />
-							</div>		
-							<div class="item"> 
-								<img  src="images/logos/white12.png" alt="" />
-							</div>	
-							<div class="item"> 
-								<img  src="images/logos/white13.png" alt="" />
-							</div>									
-						</div>	
-					</div>
-				</div>
-			</div>
-		
-		
-		<div class="section back-white" id="contact">
-			<div class="contact-full-wrap">
-				<div class="contact-half-wrap">
-					<div id="cd-google-map">
-						<div id="google-container"></div>
-						<div id="cd-zoom-in"></div>
-						<div id="cd-zoom-out"></div>
-					</div>
-				</div>
-				<div class="contact-half-wrap">
-					<div class="parallax-5"></div>	
-					<div class="section back-black" id="contact">
-		
-			<div class="section">
-				<div class="container">
-					<div class="twelve columns remove-top">
-						<div class="contact-det-wrap" data-scroll-reveal="enter bottom move 100px over 1s after 0.3s">
-							<div class="contact-det"><style>
+</p></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section back-dark2" id="media">
+<div class="section padding-top">
+<div class="container">
+<div class="twelve columns">
+<div class="title-text left">
+<p>I do MAGIC.<span>I do... MUSIC!</span></p>
+<h3>I take pride in delivering only the best of me, so I can share my passion with you.</h3>
+</div>
+<div class="title-text left">
+<h3>Stay tuned!</h3>
+<p>Enjoy your staying<span>have a nice time</span></p>
+</div>
+</div>
+</div>
+<div class="clear"></div>
+<div class="section">
+<div id="portfolio-filter">
+<ul id="filter">
+<li><a class="current" data-filter="*" href="#" title="">all</a></li>
+<li class="tipped" data-tipper-options='{"direction":"top","follow":"true"}' data-title="6 projects"><a data-filter=".classical" href="#" title="">Classical</a></li>
+<li class="tipped" data-tipper-options='{"direction":"top","follow":"true"}' data-title="6 projects"><a data-filter=".popular" href="#" title="">Popular</a></li>
+<li class="tipped" data-tipper-options='{"direction":"top","follow":"true"}' data-title="5 projects"><a data-filter=".ethno" href="#" title="">Ethno</a></li>
+</ul>
+</div>
+<div id="projects-grid">
+<a class="fancybox fancybox.iframe tipped" data-tipper-options='{"direction":"top","follow":"true"}' data-title="classical" href="https://www.youtube.com/embed/videoseries?list=OLAK5uy_mI8hoCKUL134V2eh4ANGR53H10QPpje9M&amp;si=sVo1T8k6joS-YYF_&amp;rel=0&amp;showinfo=0&amp;autoplay=1">
+<div class="portfolio-box-1 classical">
+<div class="mask"></div>
+<h3><span>Chopin</span><br/>4 SCHERZI</h3>
+<img alt="" src="images/portfolio/Chopin.jpg"/>
+</div>
+</a>
+<a class="fancybox fancybox.iframe tipped" data-tipper-options='{"direction":"top","follow":"true"}' data-title="classical" href="https://www.youtube.com/embed/videoseries?list=OLAK5uy_n5hdrLBG45kX8ReGO3d9jhMzRJ6NS-xcQ&amp;si=Cs28dPuVfgu9w6Cp&amp;rel=0&amp;showinfo=0&amp;autoplay=1">
+<div class="portfolio-box-1 classical">
+<div class="mask"></div>
+<h3><span>Mussorgsky</span><br/>Pictures at an exhibition</h3>
+<img alt="" src="images/portfolio/Mussorgsky.jpg"/>
+</div>
+</a>
+<a class="fancybox fancybox.iframe tipped" data-tipper-options='{"direction":"top","follow":"true"}' data-title="classical" href="https://www.youtube.com/embed/videoseries?list=OLAK5uy_m9B2sVXjROjvS7c8wipNaHUBOoowlaPLQ&amp;si=njSMIg1sojwUi16o&amp;rel=0&amp;showinfo=0&amp;autoplay=1">
+<div class="portfolio-box-1 classical">
+<div class="mask"></div>
+<h3><span>Rachmaninoff: Moments musicaux op.16</span><br/>No. 3 in B Minor - Andante cantabile</h3>
+<img alt="" src="images/portfolio/Rachmaninoff.jpg"/>
+</div>
+</a>
+<a class="fancybox fancybox.iframe tipped" data-tipper-options='{"direction":"top","follow":"true"}' data-title="classical" href="https://www.youtube.com/embed/i30OLiGcjss?rel=0&amp;showinfo=0;byline=0&amp;portrait=0&amp;autoplay=1&amp;color=cfa144">
+<div class="portfolio-box-1 classical">
+<div class="mask"></div>
+<h3><span>P.I.Tchaikovsky</span><br/>Piano concerto No.1 I movement</h3>
+<img alt="" src="images/portfolio/1.jpg"/>
+</div>
+</a>
+<a class="fancybox fancybox.iframe tipped" data-tipper-options='{"direction":"top","follow":"true"}' data-title="classical" href="https://www.youtube.com/embed/VBiWqJp62ow?rel=0&amp;showinfo=0;byline=0&amp;portrait=0&amp;autoplay=1&amp;color=cfa144">
+<div class="portfolio-box-1 classical">
+<div class="mask"></div>
+<h3><span>P.I.Tchaikovsky</span><br/>Piano concerto No.1 II movement</h3>
+<img alt="" src="images/portfolio/1a.jpg"/>
+</div>
+</a>
+<a class="fancybox fancybox.iframe tipped" data-tipper-options='{"direction":"top","follow":"true"}' data-title="classical" href="https://www.youtube.com/embed/Uc8o8Rq7780?rel=0&amp;showinfo=0;byline=0&amp;portrait=0&amp;autoplay=1&amp;color=cfa144">
+<div class="portfolio-box-1 classical">
+<div class="mask"></div>
+<h3><span>P.I.Tchaikovsky</span><br/>Piano concerto No.1 III movement</h3>
+<img alt="" src="images/portfolio/1b.jpg"/>
+</div>
+</a>
+<a class="fancybox fancybox.iframe tipped" data-tipper-options='{"direction":"top","follow":"true"}' data-title="popular" href="https://www.youtube.com/embed/2MK2Qz0CQl8?rel=0&amp;showinfo=0;byline=0&amp;portrait=0&amp;autoplay=1&amp;color=cfa144">
+<div class="portfolio-box-1 popular">
+<div class="mask"></div>
+<h3><span>Piano Instrumental</span><br/>Somewhere over the rainbow</h3>
+<img alt="" src="images/portfolio/9.jpg"/>
+</div>
+</a>
+<a class="fancybox fancybox.iframe tipped" data-tipper-options='{"direction":"top","follow":"true"}' data-title="classical" href="https://www.youtube.com/embed/h4bZRcJXZJY?rel=0&amp;showinfo=0;byline=0&amp;portrait=0&amp;autoplay=1&amp;color=cfa144">
+<div class="portfolio-box-1 classical">
+<div class="mask"></div>
+<h3><span>F.Chopin</span><br/>Ballade No.1 op.23 in g minor</h3>
+<img alt="" src="images/portfolio/milos-mihajlovic-ballade-n.1.jpg"/>
+</div>
+<a class="fancybox fancybox.iframe tipped" data-tipper-options='{"direction":"top","follow":"true"}' data-title="classical" href="https://www.youtube.com/embed/1BGR9AsuASk?rel=0&amp;showinfo=0;byline=0&amp;portrait=0&amp;autoplay=1&amp;color=cfa144">
+<div class="portfolio-box-1 classical">
+<div class="mask"></div>
+<h3><span>F.Chopin</span><br/>Ballade No.3 op.47 in A-flat Major</h3>
+<img alt="" src="images/portfolio/milos-mihajlovic-ballade-n.3.jpg"/>
+</div>
+</a>
+</a>
+<a class="fancybox fancybox.iframe tipped" data-tipper-options='{"direction":"top","follow":"true"}' data-title="popular" href="https://www.youtube.com/embed/ZiTDj_PCMNU?rel=0&amp;showinfo=0;byline=0&amp;portrait=0&amp;autoplay=1&amp;color=cfa144">
+<div class="portfolio-box-1 popular">
+<div class="mask"></div>
+<h3><span>Iva Ikon &amp; Miloš Mihajlović</span><br/>Once I Was Loved / Cover</h3>
+<img alt="" src="images/portfolio/5a.jpg"/>
+</div>
+</a>
+<a class="fancybox fancybox.iframe tipped" data-tipper-options='{"direction":"top","follow":"true"}' data-title="classical" href="https://www.youtube.com/embed/6UYqlva4cbM?rel=0&amp;showinfo=0;byline=0&amp;portrait=0&amp;autoplay=1&amp;color=cfa144">
+<div class="portfolio-box-1 classical">
+<div class="mask"></div>
+<h3><span>F.Chopin</span><br/>Andante Spianato &amp; Grande Polonaise Brillande op.22</h3>
+<img alt="" src="images/portfolio/6.jpg"/>
+</div>
+</a>
+<a class="fancybox fancybox.iframe tipped" data-tipper-options='{"direction":"top","follow":"true"}' data-title="ethno" href="https://www.youtube.com/embed/videoseries?list=OLAK5uy_mKxBuluOMashR3QlNrjfijzwCbMIl05Y8&amp;si=BYhYiLcv1EhiPs5Q&amp;rel=0&amp;showinfo=0&amp;autoplay=1">
+<div class="portfolio-box-1 ethno">
+<div class="mask"></div>
+<h3><span>Ethno Essentials</span><br/>ALBUM</h3>
+<img alt="" src="images/portfolio/EthnoEssentials.jpg"/>
+</div>
+</a>
+<a class="fancybox fancybox.iframe tipped" data-tipper-options='{"direction":"top","follow":"true"}' data-title="ethno" href="https://www.youtube.com/embed/videoseries?list=OLAK5uy_nJywPEI8c8u4Bk_qG3TiZX2uAAnnzHmTA&amp;si=kYMMxAabKzNq7SYD&amp;rel=0&amp;showinfo=0&amp;autoplay=1">
+<div class="portfolio-box-1 ethno">
+<div class="mask"></div>
+<h3><span>Ethno Essentials vol. 2</span><br/>ALBUM</h3>
+<img alt="" src="images/portfolio/EthnoEssentials2.jpg"/>
+</div>
+</a>
+<a class="fancybox fancybox.iframe tipped" data-tipper-options='{"direction":"top","follow":"true"}' data-title="ethno" href="https://www.youtube.com/embed/videoseries?list=OLAK5uy_kMfKN7m-DS3hDEZc56e3KU5P0ptlaHDk4&amp;si=DhXthr1rfDMGJyyf&amp;rel=0&amp;showinfo=0&amp;autoplay=1">
+<div class="portfolio-box-1 ethno">
+<div class="mask"></div>
+<h3><span>This is Balkan</span><br/>ALBUM</h3>
+<img alt="" src="images/portfolio/ThisisBalkan.jpg"/>
+</div>
+</a>
+<a class="fancybox fancybox.iframe tipped" data-tipper-options='{"direction":"top","follow":"true"}' data-title="ethno" href="https://www.youtube.com/embed/videoseries?list=OLAK5uy_kQYyrmSIVaU79zR_AIOapw-N1AbdekuUk&amp;si=8-jTGi1iWhQnivpe&amp;rel=0&amp;showinfo=0&amp;autoplay=1">
+<div class="portfolio-box-1 ethno">
+<div class="mask"></div>
+<h3><span>Essentially Ethnic Piano</span><br/>ALBUM</h3>
+<img alt="" src="images/portfolio/Eep.jpg"/>
+</div>
+</a>
+<a class="fancybox fancybox.iframe tipped" data-tipper-options='{"direction":"top","follow":"true"}' data-title="ethno" href="https://www.youtube.com/embed/bSIkZsA6uDY?rel=0&amp;showinfo=0;byline=0&amp;portrait=0&amp;autoplay=1&amp;color=cfa144">
+<div class="portfolio-box-1 ethno">
+<div class="mask"></div>
+<h3><span>Jasna Kočijašević &amp; Miloš Mihajlović</span><br/>Kraj tanana šadrvana</h3>
+<img alt="" src="images/portfolio/8.jpg"/>
+</div>
+</a>
+<a class="fancybox fancybox.iframe tipped" data-tipper-options='{"direction":"top","follow":"true"}' data-title="classical" href="https://www.youtube.com/embed/ayJCPOMAuvs?rel=0&amp;showinfo=0;byline=0&amp;portrait=0&amp;autoplay=1&amp;color=cfa144">
+<div class="portfolio-box-1 classical">
+<div class="mask"></div>
+<h3><span>S.Rachmaninoff</span><br/>Prelude op.32 No.12</h3>
+<img alt="" src="images/portfolio/2.jpg"/>
+</div>
+</a>
+<a class="fancybox fancybox.iframe tipped" data-tipper-options='{"direction":"top","follow":"true"}' data-title="classical" href="https://www.youtube.com/embed/OjE9HLzSY3g?rel=0&amp;showinfo=0;byline=0&amp;portrait=0&amp;autoplay=1&amp;color=cfa144">
+<div class="portfolio-box-1 classical">
+<div class="mask"></div>
+<h3><span>W.A.Mozart</span><br/>Sonata a-minor K.310</h3>
+<img alt="" src="images/portfolio/12.jpg"/>
+</div>
+</a>
+</div>
+</div>
+</div>
+<div class="section full-height" id="quote">
+<div id="video-wrap">
+<video autoplay="true" id="video_background" loop="loop" muted="muted" poster="videos/mmwebja.jpg" preload="auto" volume="0">
+<source src="videos/mmwebja.webm" type="video/webm"/>
+<source src="videos/mmwebja.mp4" type="video/mp4"/>
+<source src="videos/mmwebja.ogg" type="video/ogg"/>
+</video>
+</div>
+<div class="dark-over-sep"></div>
+<div class="page-center-text">
+<div class="container">
+<div class="twelve columns" data-scroll-reveal="enter bottom move 100px over 1s after 0.3s">
+<div class="owl-carousel owl-theme" id="owl-sep-1">
+<div class="item">
+<div class="quote">
+<h4>"Music is a funny word. Some people think music means how it sounds. Then... you dig deeper - it's really how it feels."</h4>
+</div>
+</div>
+<div class="item">
+<div class="quote">
+<h4>"Serb pianist Milos Mihajlovic earned a standing ovation from the Clubbe Hall audience in addition to his $20,000 prize when he was named the winner of the 2009 Southern Highlands International Piano Competition (SHIPC) on Saturday evening. The judging panel took only minutes to declare Mihajlovic the winner after the four finalists’ concerto performances"</h4>
+</div>
+</div>
+<div class="item">
+<div class="quote">
+<h4>"His playing is shaped by an assured technique and genuine interpretive insights, however, his credentials are appreciated on their own merits, and the risks are justified!"</h4>
+</div>
+</div>
+<div class="item">
+<div class="quote">
+<h4>"Equally impressive, though, is his respect for the emotional nuances of the music, every shift in mood rendered poetically but without distorting the musical continuity.  Mr. Mihajlović’s playing proves as eloquently as that of any pianist in recent memory that the greatest test of a musician’s artistry is to perform in a manner that allows the music at hand to be heard on its own terms."</h4>
+</div>
+</div>
+<div class="item">
+<div class="quote">
+<h4>"With his playing of these pieces, Mr. Mihajlović rivals the best performances of this repertory by allowing the listener to hear, unencumbered, the voice of a composer!"</h4>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section padding-top-bottom">
+<div class="parallax-2"></div>
+<div class="dark-over-sep"></div>
+<div class="container z-bigger">
+<div class="twelve columns">
+<div class="owl-carousel owl-theme" id="owl-logos">
+<div class="item">
+<img alt="" src="images/logos/white1.png"/>
+</div>
+<div class="item">
+<img alt="" src="images/logos/white2.png"/>
+</div>
+<div class="item">
+<img alt="" src="images/logos/white3.png"/>
+</div>
+<div class="item">
+<img alt="" src="images/logos/white4.png"/>
+</div>
+<div class="item">
+<img alt="" src="images/logos/white5.png"/>
+</div>
+<div class="item">
+<img alt="" src="images/logos/white6.png"/>
+</div>
+<div class="item">
+<img alt="" src="images/logos/white7.png"/>
+</div>
+<div class="item">
+<img alt="" src="images/logos/white8.png"/>
+</div>
+<div class="item">
+<img alt="" src="images/logos/white9.png"/>
+</div>
+<div class="item">
+<img alt="" src="images/logos/white10.png"/>
+</div>
+<div class="item">
+<img alt="" src="images/logos/white11.png"/>
+</div>
+<div class="item">
+<img alt="" src="images/logos/white12.png"/>
+</div>
+<div class="item">
+<img alt="" src="images/logos/white13.png"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section back-white" id="contact">
+<div class="contact-full-wrap">
+<div class="contact-half-wrap">
+<div id="cd-google-map">
+<div id="cd-google-map"></div>
+<div id="cd-zoom-in"></div>
+<div id="cd-zoom-out"></div>
+</div>
+</div>
+<div class="contact-half-wrap">
+<div class="parallax-5"></div>
+<div class="section back-black" id="contact">
+<div class="section">
+<div class="container">
+<div class="twelve columns remove-top">
+<div class="contact-det-wrap" data-scroll-reveal="enter bottom move 100px over 1s after 0.3s">
+<div class="contact-det"><style>
 a:link {
   color: white;
   background-color: transparent;
@@ -626,100 +604,97 @@ a:active {
   text-decoration: underline;
 }
 </style>
-								
-								<p>@ <span>drop a line</span></p>
-								<h6><a href="mailto:info@mihajmi.com">info@mihajmi.com</a></h6>
-							</div>
-							<div class="contact-det">
-								<p>🏠 <span>Letters to:</span></p>
-								<h6>Fakultet Muzičke Umetnosti</h6>
-								<h6>Kralja Milana 50</h6>
-								<h6>11000 Belgrade, Serbia</h6>
-							</div>
-						</div>
-					</div>
-				</div>
-		</div>	
-		
-		</div>	
-				</div>
-			</div>	
-		</div>
-		
-		
-		<div class="section back-black">
-				
-				<div class="container">
-				<div class="six columns" data-scroll-reveal="enter bottom move 100px over 1s after 0.4s">
-					<div class="footer-top">
-						<img src="images/logo-light.png" alt="Signature" />
-					</div>
-				</div>
-				<div class="six columns" data-scroll-reveal="enter bottom move 100px over 1s after 0.4s">
-					<div class="footer-top">
-						<div class="social-footer">
-							<ul class="list-social-footer">
-								<li class="icon-footer tipped" data-title="instagram"  data-tipper-options='{"direction":"top","follow":"true"}'>
-									<a href="https://www.instagram.com/mihajmi/">&#xf16d;</a>
-								</li>
-								<li class="icon-footer tipped" data-title="youtube"  data-tipper-options='{"direction":"top","follow":"true"}'>
-									<a href="https://www.youtube.com/mihajmi">&#xf167;</a>
-								</li>
-							</ul>	
-						</div>
-					</div>
-				</div>
-				<div class="twelve columns remove-top remove-bottom" data-scroll-reveal="enter bottom move 100px over 1s after 0.4s">
-					<div class="footer-line"></div>
-				</div>
-				<div class="five columns" data-scroll-reveal="enter bottom move 100px over 1s after 0.4s">
-					<div class="left-footer">
-						<p>2018 © mihajmi Group. All rights reserved.</p>
-					</div>
-				</div>
-				<div class="two columns" data-scroll-reveal="enter bottom move 100px over 1s after 0.4s">
-					<a href="#home" data-gal="m_PageScroll2id"><div class="arrow-up-footer"></div></a>
-				</div>
-				<div class="five columns" data-scroll-reveal="enter bottom move 100px over 1s after 0.4s">
-					<div class="right-footer">
-						<p>See you again soon... © mihajmi Group</p>
-					</div>
-				</div>
-			</div>
-			</div>			
-
-	</div>	
-	
-
-	
-	<!-- JAVASCRIPT
+<p>@ <span>drop a line</span></p>
+<h6><a href="mailto:info@mihajmi.com">info@mihajmi.com</a></h6>
+</div>
+<div class="contact-det">
+<p>🏠 <span>Letters to:</span></p>
+<h6>Fakultet Muzičke Umetnosti</h6>
+<h6>Kralja Milana 50</h6>
+<h6>11000 Belgrade, Serbia</h6>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section back-black">
+<div class="container">
+<div class="six columns" data-scroll-reveal="enter bottom move 100px over 1s after 0.4s">
+<div class="footer-top">
+<img alt="Signature" src="images/logo-light.png"/>
+</div>
+</div>
+<div class="six columns" data-scroll-reveal="enter bottom move 100px over 1s after 0.4s">
+<div class="footer-top">
+<div class="social-footer">
+<ul class="list-social-footer">
+<li class="icon-footer tipped" data-tipper-options='{"direction":"top","follow":"true"}' data-title="instagram">
+<a href="https://www.instagram.com/mihajmi/"></a>
+</li>
+<li class="icon-footer tipped" data-tipper-options='{"direction":"top","follow":"true"}' data-title="youtube">
+<a href="https://www.youtube.com/mihajmi"></a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="twelve columns remove-top remove-bottom" data-scroll-reveal="enter bottom move 100px over 1s after 0.4s">
+<div class="footer-line"></div>
+</div>
+<div class="five columns" data-scroll-reveal="enter bottom move 100px over 1s after 0.4s">
+<div class="left-footer">
+<p>2018 © mihajmi Group. All rights reserved.</p>
+</div>
+</div>
+<div class="two columns" data-scroll-reveal="enter bottom move 100px over 1s after 0.4s">
+<a data-gal="m_PageScroll2id" href="#home"><div class="arrow-up-footer"></div></a>
+</div>
+<div class="five columns" data-scroll-reveal="enter bottom move 100px over 1s after 0.4s">
+<div class="right-footer">
+<p>See you again soon... © mihajmi Group</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- JAVASCRIPT
     ================================================== -->
-<script type="text/javascript" src="js/jquery-2.1.1.js"></script>	
-<script type="text/javascript" src="js/royal_preloader.min.js"></script>
-<script type="text/javascript" src="js/plugins.js"></script>
-<script type="text/javascript" src="js/masonry.js"></script> 
-<script type="text/javascript" src="js/isotope.js"></script>
-<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCUW0jQ8Xf9JFdEY_AaWpISXDcQahhqJD8"></script>
-	<!-- ==================
+<script src="js/jquery-2.1.1.js" type="text/javascript"></script>
+<script src="js/royal_preloader.min.js" type="text/javascript"></script>
+<script src="js/plugins.js" type="text/javascript"></script>
+<script src="js/masonry.js" type="text/javascript"></script>
+<script src="js/isotope.js" type="text/javascript"></script>
+<!-- ==================
 		Go to this link to activated your google map API KEY https://developers.google.com/maps/documentation/javascript/tutorial#api_key 
 		your key replace in script link for google map after .../maps/api/js?key=AIzaSyCImyVRss33XCZEIfn6QUso-cOFSVGDTME
 		coordinates for map you can change in custom.js file 
-	================== -->	
-	 <!-- REVOLUTION JS FILES -->
-<script type="text/javascript" src="js/jquery.themepunch.tools.min.js"></script>
-<script type="text/javascript" src="js/jquery.themepunch.revolution.min.js"></script> 
-	<!-- SLIDER REVOLUTION 5.0 EXTENSIONS -->
-<script type="text/javascript" src="js/extensions/revolution.extension.actions.min.js"></script>
-<script type="text/javascript" src="js/extensions/revolution.extension.carousel.min.js"></script>
-<script type="text/javascript" src="js/extensions/revolution.extension.kenburn.min.js"></script>
-<script type="text/javascript" src="js/extensions/revolution.extension.layeranimation.min.js"></script>
-<script type="text/javascript" src="js/extensions/revolution.extension.migration.min.js"></script>
-<script type="text/javascript" src="js/extensions/revolution.extension.navigation.min.js"></script>
-<script type="text/javascript" src="js/extensions/revolution.extension.parallax.min.js"></script>
-<script type="text/javascript" src="js/extensions/revolution.extension.slideanims.min.js"></script>
-<script type="text/javascript" src="js/extensions/revolution.extension.video.min.js"></script>
-<script type="text/javascript" src="js/custom.js"></script>    
+	================== -->
+<!-- REVOLUTION JS FILES -->
+<script src="js/jquery.themepunch.tools.min.js" type="text/javascript"></script>
+<script src="js/jquery.themepunch.revolution.min.js" type="text/javascript"></script>
+<!-- SLIDER REVOLUTION 5.0 EXTENSIONS -->
+<script src="js/extensions/revolution.extension.actions.min.js" type="text/javascript"></script>
+<script src="js/extensions/revolution.extension.carousel.min.js" type="text/javascript"></script>
+<script src="js/extensions/revolution.extension.kenburn.min.js" type="text/javascript"></script>
+<script src="js/extensions/revolution.extension.layeranimation.min.js" type="text/javascript"></script>
+<script src="js/extensions/revolution.extension.migration.min.js" type="text/javascript"></script>
+<script src="js/extensions/revolution.extension.navigation.min.js" type="text/javascript"></script>
+<script src="js/extensions/revolution.extension.parallax.min.js" type="text/javascript"></script>
+<script src="js/extensions/revolution.extension.slideanims.min.js" type="text/javascript"></script>
+<script src="js/extensions/revolution.extension.video.min.js" type="text/javascript"></script>
+<script src="js/custom.js" type="text/javascript"></script>
 <!-- End Document
 ================================================== -->
-</body>
+</div><script src="leaflet/leaflet.js"></script><script>
+          var map = L.map('cd-google-map', { scrollWheelZoom: false }).setView([44.805574, 20.464323], 18);
+          L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; OpenStreetMap saradnici'
+          }).addTo(map);
+          L.marker([44.805574, 20.464323]).addTo(map)
+            .bindPopup('Fakultet muzičke umetnosti');
+        </script></body>
 </html>
