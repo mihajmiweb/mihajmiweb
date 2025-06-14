@@ -1,0 +1,5 @@
+User-agent: Googlebot
+Disallow:
+
+sitemap: https://www.mihajmi.com/sitemap.xml
+sitemap: https://mihajmi.com/sitemap.xml
